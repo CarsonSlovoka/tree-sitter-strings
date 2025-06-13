@@ -15,11 +15,24 @@ tree-sitter generate
 
 如果修改了[grammar.js](grammar.js)要先使用
 
-```
+```sh
 tree-sitter generate
 ```
 
 使parser.c重新更新
 
 如此 `tree-sitter test` 才會正常
+
+
+# tree-itter.json參考寫法
+
+[tree-sitter-python/tree-sitter.json](https://github.com/tree-sitter/tree-sitter-python/blob/710796b8b877a970297106e5bbc8e2afa47f86ec/tree-sitter.json#L1-L42)
+
+
+> [!TIP]
+> 其實init後，tree-sitter.json的一開始
+>
+> `"$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json"`
+>
+> 此連結裡面就是此範文件的寫法
 

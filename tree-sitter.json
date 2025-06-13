@@ -2,15 +2,16 @@
   "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
-      "name": "tree_sitter_strings",
+      "name": "strings",
       "camelcase": "Strings",
-      "title": "TreeSitterStrings",
-      "scope": "source.tree_sitter_strings",
+      "title": "Strings",
+      "scope": "source.strings",
       "file-types": [
-        "tree_sitter_strings"
+        "strings"
       ],
-      "injection-regex": "^tree_sitter_strings$",
-      "class-name": "TreeSitterTreeSitterStrings"
+      "highlights": "queries/highlights.scm",
+      "injection-regex": "^strings$",
+      "class-name": "TreeSitterStrings"
     }
   ],
   "metadata": {
