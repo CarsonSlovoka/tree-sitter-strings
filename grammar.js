@@ -9,7 +9,7 @@
 
 
 module.exports = grammar({
-  name: 'tree_sitter_strings',
+  name: 'strings',
 
   rules: {
     source_file: $ => repeat($._line),
