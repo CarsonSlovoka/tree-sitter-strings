@@ -1,4 +1,9 @@
-# tree-sitter generate
+# init
+
+```sh
+tree-sitter init
+tree-sitter generate
+```
 
 生成 [src](./src) 目錄的內容
 
