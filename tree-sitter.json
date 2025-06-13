@@ -25,8 +25,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/CarsonSlovoka/tree-sitter-strings",
-      "funding": "https://github.com/CarsonSlovoka/tree-sitter-strings"
+      "repository": "https://github.com/CarsonSlovoka/tree-sitter-strings"
     }
   },
   "bindings": {

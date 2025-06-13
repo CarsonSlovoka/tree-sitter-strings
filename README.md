@@ -24,7 +24,7 @@ tree-sitter generate
 如此 `tree-sitter test` 才會正常
 
 
-# tree-itter.json參考寫法
+# tree-sitter.json參考寫法
 
 [tree-sitter-python/tree-sitter.json](https://github.com/tree-sitter/tree-sitter-python/blob/710796b8b877a970297106e5bbc8e2afa47f86ec/tree-sitter.json#L1-L42)
 
@@ -36,3 +36,6 @@ tree-sitter generate
 >
 > 此連結裡面就是此範文件的寫法
 
+
+> [!IMPORTANT]
+> 如果tree-sitter.json檔案要更新，就把當刪除，之後再用`tree-sitter init`來重新創建，如此相關的檔案才會一併被更新
