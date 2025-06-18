@@ -1,4 +1,5 @@
-(quoted_string) @string
+(string) @string
 (comment) @comment
+(pair) @pair
 "=" @label
 ";" @punctuation.delimiter
