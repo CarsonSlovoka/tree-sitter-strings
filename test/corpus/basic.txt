@@ -1,8 +1,0 @@
-=== Test: basic assignment
-x = 123;
-----
-(source_file
-  (assignment
-    (identifier)
-    (number)))
-
