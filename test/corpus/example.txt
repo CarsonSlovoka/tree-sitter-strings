@@ -1,0 +1,44 @@
+===============
+basic
+===============
+
+/* 一般註解 */
+"hello" = "你好";
+"bye" = "再見";
+
+---
+
+(source_file
+    (comment)
+    (pair
+        key: (string)
+        value: (string)
+    )
+    (pair
+        key: (string)
+        value: (string)
+    )
+)
+
+===============
+comments
+===============
+
+/*
+    一般註解
+    ...
+    row 2
+*/
+"key" = "val";
+// single comment
+
+---
+
+(source_file
+    (comment)
+    (pair
+        key: (string)
+        value: (string)
+    )
+    (comment)
+)
