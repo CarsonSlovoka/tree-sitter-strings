@@ -1,13 +1,13 @@
 [package]
-name = "tree-sitter-tree-sitter-strings"
+name = "tree-sitter-strings"
 description = "xcode strings"
 version = "0.1.0"
 authors = ["Carson <jackparadise520a@gmail.com>"]
 license = "MIT"
 readme = "README.md"
-keywords = ["incremental", "parsing", "tree-sitter", "tree-sitter-strings"]
+keywords = ["incremental", "parsing", "tree-sitter", "strings"]
 categories = ["parser-implementations", "parsing", "text-editors"]
-repository = "https://github.com/carsonslovoka/tree-sitter-strings"
+repository = "https://github.com/carsonslovoka/tree-sitter-strings/"
 edition = "2021"
 autoexamples = false
 
@@ -31,4 +31,4 @@ tree-sitter-language = "0.1"
 cc = "1.2"
 
 [dev-dependencies]
-tree-sitter = "0.25.5"
+tree-sitter = "0.25.6"

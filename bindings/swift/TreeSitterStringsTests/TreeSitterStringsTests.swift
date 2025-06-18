@@ -1,12 +1,12 @@
 import XCTest
 import SwiftTreeSitter
-import TreeSitterTreeSitterStrings
+import TreeSitterStrings
 
-final class TreeSitterTreeSitterStringsTests: XCTestCase {
+final class TreeSitterStringsTests: XCTestCase {
     func testCanLoadGrammar() throws {
         let parser = Parser()
-        let language = Language(language: tree_sitter_tree_sitter_strings())
+        let language = Language(language: tree_sitter_strings())
         XCTAssertNoThrow(try parser.setLanguage(language),
-                         "Error loading TreeSitterStrings grammar")
+                         "Error loading Strings grammar")
     }
 }

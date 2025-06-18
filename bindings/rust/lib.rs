@@ -7,25 +7,25 @@
 //! let code = r#"
 //! "#;
 //! let mut parser = tree_sitter::Parser::new();
-//! let language = tree_sitter_tree_sitter_strings::LANGUAGE;
+//! let language = tree_sitter_strings::LANGUAGE;
 //! parser
 //!     .set_language(&language.into())
-//!     .expect("Error loading TreeSitterStrings parser");
+//!     .expect("Error loading Strings parser");
 //! let tree = parser.parse(code, None).unwrap();
 //! assert!(!tree.root_node().has_error());
 //! ```
 //!
-//! [`Parser`]: https://docs.rs/tree-sitter/0.25.5/tree_sitter/struct.Parser.html
+//! [`Parser`]: https://docs.rs/tree-sitter/0.25.6/tree_sitter/struct.Parser.html
 //! [tree-sitter]: https://tree-sitter.github.io/
 
 use tree_sitter_language::LanguageFn;
 
 extern "C" {
-    fn tree_sitter_tree_sitter_strings() -> *const ();
+    fn tree_sitter_strings() -> *const ();
 }
 
 /// The tree-sitter [`LanguageFn`] for this grammar.
-pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_tree_sitter_strings) };
+pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_strings) };
 
 /// The content of the [`node-types.json`] file for this grammar.
 ///
@@ -46,6 +46,6 @@ mod tests {
         let mut parser = tree_sitter::Parser::new();
         parser
             .set_language(&super::LANGUAGE.into())
-            .expect("Error loading TreeSitterStrings parser");
+            .expect("Error loading Strings parser");
     }
 }

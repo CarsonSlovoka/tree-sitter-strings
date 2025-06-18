@@ -9,7 +9,6 @@
       "file-types": [
         "strings"
       ],
-      "highlights": "queries/highlights.scm",
       "injection-regex": "^strings$",
       "class-name": "TreeSitterStrings"
     }
@@ -25,7 +24,7 @@
       }
     ],
     "links": {
-      "repository": "https://github.com/CarsonSlovoka/tree-sitter-strings"
+      "repository": "https://github.com/CarsonSlovoka/tree-sitter-strings/"
     }
   },
   "bindings": {

@@ -1,4 +1,4 @@
-# init
+# tree-sitter init
 
 ```sh
 tree-sitter init
@@ -6,6 +6,17 @@ tree-sitter generate
 ```
 
 生成 [src](./src) 目錄的內容
+
+## update
+
+如果在init之後又想要修改套件的名稱
+
+沒有辦法只改一個json文件，就套用到所有的項目
+
+因此要將之前所自動創件的文件和目錄都刪除，再重新init
+
+> [!IMPORTANT]
+> 如果保留之前舊有文件，那麼再用tree-sitter init時，發現該文件已經存在，就不會再重新生成，所以相關的文件都要刪掉讓其重新產生
 
 # scm
 
@@ -35,7 +46,3 @@ tree-sitter generate
 > `"$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json"`
 >
 > 此連結裡面就是此範文件的寫法
-
-
-> [!IMPORTANT]
-> 如果tree-sitter.json檔案要更新，就把當刪除，之後再用`tree-sitter init`來重新創建，如此相關的檔案才會一併被更新

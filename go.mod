@@ -1,4 +1,4 @@
-module github.com/carsonslovoka/tree-sitter-strings
+module github.com/carsonslovoka/tree-sitter-strings/
 
 go 1.22
 
