@@ -38,8 +38,22 @@ module.exports = grammar({
 
     // \\. 匹配任何轉譯字，例如: \n, \\, \"
     // | 或
-    // [^"\\] 匹配所有非 " 和 \ 外的字符
-    string: $ => /"(?:\\.|[^"\\])*"/,
+    // [^"\\] 匹配所有非 " 和 \ 和 \n 外的字符
+    // string: $ => /"(?:\\.|[^"\\])*"/,
+
+    // 用以下的方法，使string是不能分行寫的
+    // 當參數沒有用到可以用 _ 就不需要用 $
+    // string: _ => seq( ❌ 失敗，這樣還是可以換行寫
+    //   '"',
+    //   repeat(choice(
+    //     // 普通字符（不包括雙引號、換行、反斜杠）
+    //     /[^"\n\r\\]/,
+    //     seq('\\', choice('"', '\\'))  // 只允許 \" 和 \\
+    //   )),
+    //   '"'
+    // ),
+
+    string: _ => /"[_\p{XID_Start}][_\p{XID_Continue}]*"/, // python: identifier https://github.com/tree-sitter/tree-sitter-python/blob/710796b8b877a970297106e5bbc8e2afa47f86ec/grammar.js#L1174C5-L1174C61
 
     // comment可以
     // token(...) 會將裡頭的內容視為不可分割的單元，即: 解析器會將整個註釋視為一個單獨的 token，而不是解析其內部結構

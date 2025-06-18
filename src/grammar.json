@@ -40,7 +40,7 @@
     },
     "string": {
       "type": "PATTERN",
-      "value": "\"(?:\\\\.|[^\"\\\\])*\""
+      "value": "\"[_\\p{XID_Start}][_\\p{XID_Continue}]*\""
     },
     "comment": {
       "type": "TOKEN",

@@ -42,3 +42,18 @@ comments
     )
     (comment)
 )
+
+===============
+must single line
+===============
+"key" = "
+
+value
+";
+
+---
+
+(document
+  (ERROR
+    (string)
+    (UNEXPECTED '\n')))
