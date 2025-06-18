@@ -123,6 +123,7 @@ tree-sitter parse corpus/example.txt
 
 前置動作要先生成它的wasm, 使用`tree-sitter build --wasm`
 ```sh
+tree-sitter generate # generate要先，不然build --wasm還是會用到舊的
 sudo tree-sitter build --wasm
 # 如果tree-sitter是只有在個人工作目錄中有，可以用絕對路徑
 which tree-sitter | xargs -I exe sudo exe build --wasm
