@@ -119,6 +119,18 @@ tree-sitter test -i 'comments'
 tree-sitter parse corpus/example.txt
 ```
 
+# tree-sitter playground
+
+前置動作要先生成它的wasm, 使用`tree-sitter build --wasm`
+```sh
+sudo tree-sitter build --wasm
+# 如果tree-sitter是只有在個人工作目錄中有，可以用絕對路徑
+which tree-sitter | xargs -I exe sudo exe build --wasm
+# 會生成 tree-sitter-strings.wasm
+
+tree-sitter playground # 💡 只要有wasm的檔案，就可以直接使用此命令，在網頁上模擬測試
+```
+
 # 參考資料
 
 - https://tree-sitter.github.io/tree-sitter/index.html
