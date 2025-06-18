@@ -127,6 +127,10 @@ sudo tree-sitter build --wasm
 # 如果tree-sitter是只有在個人工作目錄中有，可以用絕對路徑
 which tree-sitter | xargs -I exe sudo exe build --wasm
 # 會生成 tree-sitter-strings.wasm
+# 以上會需要用到 emscripten/emsdk 如果沒有，會自己去載
+# 完成之後
+# sudo docker images | grep emscripten/emsdk
+# emscripten/emsdk    4.0.4  a411b47f58db  3 months ago  1.97GB
 
 tree-sitter playground # 💡 只要有wasm的檔案，就可以直接使用此命令，在網頁上模擬測試
 ```
