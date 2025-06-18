@@ -8,10 +8,29 @@
 // @ts-check
 
 module.exports = grammar({
-  name: "strings",
+  name: 'strings',
+
+  extras: $ => [
+    /\s/, // 空白
+    $.comment,
+  ],
 
   rules: {
-    // TODO: add the actual grammar rules
-    source_file: $ => "hello"
+    source_file: $ => repeat($.pair),
+
+    pair: $ => seq(
+      field("key", $.string),
+      '=',
+      field("value", $.string),
+      ';'
+    ),
+
+    string: $ => /"(?:\\.|[^"\\])*"/,
+
+    comment: $ => token(choice(
+      seq('/*', /[^*]*\*+([^/*][^*]*\*+)*/, '/'),
+      seq('//', /.*/),
+    )),
   }
 });
+
