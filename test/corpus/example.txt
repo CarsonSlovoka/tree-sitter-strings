@@ -8,7 +8,7 @@ basic
 
 ---
 
-(source_file
+(document
     (comment)
     (pair
         key: (string)
@@ -34,7 +34,7 @@ comments
 
 ---
 
-(source_file
+(document
     (comment)
     (pair
         key: (string)

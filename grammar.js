@@ -16,7 +16,7 @@ module.exports = grammar({
   ],
 
   rules: {
-    source_file: $ => repeat($.pair),
+    document: $ => repeat($.pair),
 
     pair: $ => seq(
       field("key", $.string),

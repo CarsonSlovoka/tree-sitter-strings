@@ -1,5 +1,21 @@
 [
   {
+    "type": "document",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "pair",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "pair",
     "named": true,
     "fields": {
@@ -23,22 +39,6 @@
           }
         ]
       }
-    }
-  },
-  {
-    "type": "source_file",
-    "named": true,
-    "root": true,
-    "fields": {},
-    "children": {
-      "multiple": true,
-      "required": false,
-      "types": [
-        {
-          "type": "pair",
-          "named": true
-        }
-      ]
     }
   },
   {
